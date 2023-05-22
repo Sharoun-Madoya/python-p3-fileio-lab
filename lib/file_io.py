@@ -1,8 +1,20 @@
 def write_file(file_name, file_content):
-    pass
+    file_path= str(file_name) + ".txt"
+    with open(file_path, 'w') as f:
+        f.write(file_content)
+    
 
 def append_file(file_name, append_content):
-    pass
+    file_path= str(file_name) + ".txt"
+    with open(file_path, 'a') as f:
+        f.write(append_content)
+        def write_to_file(file_name, file_content, append_content):
+            file_path= str(file_name) + ".txt"
+            with open(file_path, 'w') as f:
+                f.write(file_content)
+                f.write(append_content)
 
 def read_file(file_name):
-    pass
+    file_path= str(file_name) + ".txt"
+    with open(file_path, 'r') as f:
+        return f.read()
